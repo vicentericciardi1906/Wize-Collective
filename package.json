@@ -1,0 +1,12 @@
+{
+  "name": "wize-collective",
+  "version": "1.0.0",
+  "description": "Wize Collective — Holistic Health by Xana Nunes",
+  "private": true,
+  "dependencies": {
+    "stripe": "^14.0.0"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
