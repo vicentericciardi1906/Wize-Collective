@@ -1,5 +1,5 @@
 // ============================================================
-// WIZE COLLECTIVE — Stripe Payment Intent API
+// WIZE COLLECTIVE ‚Äî Stripe Payment Intent API
 // Vercel Serverless Function
 // File: /api/create-payment-intent.js
 // ============================================================
@@ -8,15 +8,11 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 // Retreat prices in cents (Stripe uses smallest currency unit)
 const PRICES = {
-  'Seeds to Bloom':              89000,   // €890.00
-  'Amazónes Retreat':           140000,   // €1,400.00
-  'Flux — April':                 4500,   // €45.00
-  'Flux — May':                   4500,
-  'Flux — June':                  4500,
-  'Wize Days':                    3500,   // €35.00
-  'Wize Day — Summer':            3500,
-  'Holistic Coaching Session':   12000,   // €120.00
-  'Dynamic Breathwork':           5500,   // €55.00
+  'Amaz√≥nes Retreat':           140000,   // ‚Ç¨1,400.00
+  'Flux ‚Äî April':                 4500,   // ‚Ç¨45.00
+  'Flux ‚Äî May':                   4500,
+  'Flux ‚Äî June':                  4500,
+  'Holistic Coaching Session':   12000,   // ‚Ç¨120.00
 };
 
 module.exports = async function handler(req, res) {
@@ -67,7 +63,7 @@ module.exports = async function handler(req, res) {
         source:       'wize-collective-website',
       },
       receipt_email: email,
-      description: `Wize Collective — ${retreat}${date ? ' · ' + date : ''}`,
+      description: `Wize Collective ‚Äî ${retreat}${date ? ' ¬∑ ' + date : ''}`,
     });
 
     // Return client secret to frontend
