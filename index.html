@@ -365,12 +365,17 @@ footer{background:var(--plum2);border-top:1px solid rgba(255,255,255,.08);paddin
 
 /* RESPONSIVE */
 @media(max-width:960px){
-  nav{padding:18px 24px;}nav.scrolled{padding:14px 24px;}.nav-links{display:none;}.hamburger{display:flex;}
+  nav{padding:18px 24px;}nav.scrolled{padding:14px 24px;}.nav-links{display:none;}.nav-book{display:none;}.hamburger{display:flex;}
   #hero{grid-template-columns:1fr;height:auto;}.hero-left{padding:120px 24px 60px;}.hero-right{height:300px;}.hero-sub{display:none;}
+  .hero-ctas .btn-primary,.hero-ctas .btn-ghost{padding:14px 32px;font-size:.7rem;text-align:center;}
   section,#about,#retreats,#calendar,#blog,#gallery,#testimonials,#faq,#contact{padding:80px 24px;}
+  #about{grid-template-columns:1fr;gap:48px;}
+  .about-visual{order:2;}.about-content{order:1;}
   .about-visual,.gallery-intro,.testi-header,.footer-grid{grid-template-columns:1fr;gap:40px;}
+  .testi-header{text-align:left;}.testi-rating{text-align:left;}
   .retreats-grid,.testi-grid{grid-template-columns:1fr;}
   .calendar-grid,.team-layout,.faq-layout,#contact{grid-template-columns:1fr;gap:48px;}
+  .cal-event{grid-template-columns:60px 1fr auto;padding:28px 24px;gap:16px;}
   .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;}
   .g-item:nth-child(1){grid-column:span 2;grid-row:span 1;height:240px;}
   .g-item:nth-child(2),.g-item:nth-child(3),.g-item:nth-child(4),.g-item:nth-child(5){grid-column:span 1;height:160px;}
@@ -380,7 +385,7 @@ footer{background:var(--plum2);border-top:1px solid rgba(255,255,255,.08);paddin
   .footer-bottom{flex-direction:column;gap:14px;text-align:center;}
   .modal-body,.modal-header{padding:28px 24px;}
   .sf-row,.cf-row{grid-template-columns:1fr;}
-  .cal-event{grid-template-columns:60px 1fr;}
+  .blog-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -580,10 +585,22 @@ footer{background:var(--plum2);border-top:1px solid rgba(255,255,255,.08);paddin
   <p class="section-body reveal rd1" style="max-width:600px;margin-bottom:48px;">Thoughts on holistic health, breathwork, coaching, and conscious living &mdash; written by Xana Nunes.</p>
   <div class="blog-grid reveal rd2">
     <a href="https://amiranda.pt" target="_blank" class="blog-card">
-      <div class="blog-card-tag">Article</div>
-      <div class="blog-card-title">Read our latest articles</div>
-      <div class="blog-card-excerpt">Explore our collection of writings on holistic health, breathwork, and personal transformation.</div>
-      <div class="blog-card-link">Read on amiranda.pt &rarr;</div>
+      <div class="blog-card-tag">Breathwork</div>
+      <div class="blog-card-title">The power of conscious breathing</div>
+      <div class="blog-card-excerpt">How breathwork can unlock deep emotional release and reconnect you with your body's natural intelligence.</div>
+      <div class="blog-card-link">Read article &rarr;</div>
+    </a>
+    <a href="https://amiranda.pt" target="_blank" class="blog-card">
+      <div class="blog-card-tag">Holistic Health</div>
+      <div class="blog-card-title">Body, mind and soul &mdash; an integrated approach</div>
+      <div class="blog-card-excerpt">Why true wellbeing requires attention to every layer of human experience, and how to begin that journey.</div>
+      <div class="blog-card-link">Read article &rarr;</div>
+    </a>
+    <a href="https://amiranda.pt" target="_blank" class="blog-card">
+      <div class="blog-card-tag">Coaching</div>
+      <div class="blog-card-title">Finding clarity through holistic coaching</div>
+      <div class="blog-card-excerpt">Blending traditional coaching with meditation, movement, and music therapy for faster, deeper transformation.</div>
+      <div class="blog-card-link">Read article &rarr;</div>
     </a>
   </div>
 </section>
