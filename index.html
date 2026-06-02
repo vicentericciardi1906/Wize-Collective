@@ -104,23 +104,24 @@ section{padding:140px 72px;}
 .retreats-header{display:flex;flex-direction:column;align-items:flex-start;margin-bottom:80px;}
 .retreats-sub{font-size:.95rem;color:var(--muted);line-height:1.85;max-width:600px;margin-top:24px;}
 .retreats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.retreat-card{background:var(--white);border:1px solid var(--border);overflow:hidden;cursor:none;transition:transform .4s,box-shadow .4s,border-color .4s;position:relative;}
+.retreat-card{background:var(--white);border:1px solid var(--border);overflow:hidden;cursor:none;transition:transform .4s,box-shadow .4s,border-color .4s;position:relative;display:flex;flex-direction:column;}
 .retreat-card:hover{transform:translateY(-8px);box-shadow:0 32px 80px rgba(123,63,110,.12);border-color:rgba(123,63,110,.3);}
-.retreat-card-img{height:220px;position:relative;overflow:hidden;}
+.retreat-card-img{height:220px;position:relative;overflow:hidden;flex-shrink:0;}
 .rci-1{background:url('https://images.unsplash.com/photo-1600618528240-fb9fc964b853?w=600&q=80') center/cover no-repeat;}
 .rci-2{background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80') center/cover no-repeat;}
 .rci-3{background:url('https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?w=600&q=80') center/cover no-repeat;}
 .rci-4{background:url('https://images.unsplash.com/photo-1532798442725-41036acc7489?w=600&q=80') center/cover no-repeat;}
+.rci-ebook{background:url('https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80') center/cover no-repeat;}
 .retreat-card-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(74,55,40,.4),transparent 60%);}
 .retreat-tag{position:absolute;top:16px;left:16px;z-index:2;background:var(--plum);color:var(--white);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;padding:5px 12px;}
 .retreat-date-badge{position:absolute;bottom:16px;right:16px;z-index:2;background:rgba(250,248,245,.92);padding:8px 14px;text-align:center;}
 .rdb-day{font-family:'Cormorant',serif;font-size:1.5rem;font-weight:400;color:var(--plum2);line-height:1;}
 .rdb-month{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);}
-.retreat-body{padding:28px 28px 32px;}
+.retreat-body{padding:28px 28px 32px;display:flex;flex-direction:column;flex:1;}
 .retreat-name{font-family:'Cormorant',serif;font-size:1.7rem;font-weight:400;color:var(--plum2);margin-bottom:6px;}
 .retreat-location{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
-.retreat-desc{font-size:.85rem;color:var(--muted);line-height:1.7;margin-bottom:24px;}
-.retreat-footer{display:flex;align-items:center;justify-content:flex-end;padding-top:18px;border-top:1px solid var(--border);}
+.retreat-desc{font-size:.85rem;color:var(--muted);line-height:1.7;margin-bottom:24px;flex:1;}
+.retreat-footer{display:flex;align-items:center;justify-content:flex-end;padding-top:18px;border-top:1px solid var(--border);margin-top:auto;}
 .retreat-price{font-family:'Cormorant',serif;font-size:1.7rem;font-weight:300;color:var(--plum2);}
 .retreat-price sup{font-size:.9rem;vertical-align:super;}
 .retreat-price span{font-size:.7rem;font-family:'Jost',sans-serif;color:var(--muted);}
@@ -341,6 +342,21 @@ footer{background:var(--plum2);border-top:1px solid rgba(255,255,255,.08);paddin
 .footer-legal a{font-size:.7rem;color:rgba(250,248,245,.3);text-decoration:none;cursor:none;transition:color .3s;}
 .footer-legal a:hover{color:rgba(250,248,245,.6);}
 
+/* EBOOK CARD */
+.ebook-card{background:var(--plum2);border:1px solid rgba(255,255,255,.1);overflow:hidden;cursor:none;transition:transform .4s,box-shadow .4s;position:relative;}
+.ebook-card:hover{transform:translateY(-8px);box-shadow:0 32px 80px rgba(123,63,110,.2);}
+.ebook-card-header{padding:32px 28px 0;display:flex;align-items:center;gap:12px;}
+.ebook-card-icon{font-size:2rem;}
+.ebook-card-tag{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,248,245,.5);border:1px solid rgba(250,248,245,.2);padding:4px 12px;}
+.ebook-card-body{padding:20px 28px 32px;}
+.ebook-card-title{font-family:'Cormorant',serif;font-size:1.7rem;font-weight:300;color:var(--white);margin-bottom:6px;}
+.ebook-card-subtitle{font-family:'Cormorant',serif;font-size:1.1rem;font-style:italic;color:rgba(220,190,210,.9);margin-bottom:18px;}
+.ebook-card-desc{font-size:.85rem;color:rgba(250,248,245,.6);line-height:1.75;margin-bottom:24px;}
+.ebook-card-footer{display:flex;align-items:center;gap:12px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);}
+.ebook-btn{background:var(--white);color:var(--plum2);border:none;padding:11px 22px;font-family:'Jost',sans-serif;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;cursor:none;transition:all .3s;text-decoration:none;text-align:center;}
+.ebook-btn:hover{background:var(--linen);transform:translateY(-1px);}
+.ebook-price{font-family:'Cormorant',serif;font-size:1.2rem;color:rgba(250,248,245,.5);font-style:italic;}
+
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(36px);transition:opacity .85s ease,transform .85s ease;}
 .reveal.visible{opacity:1;transform:none;}
@@ -504,14 +520,14 @@ footer{background:var(--plum2);border-top:1px solid rgba(255,255,255,.08);paddin
   <div class="hero-left">
     <div class="hero-eyebrow">A holistic approach to health &amp; consciousness</div>
     <h1 class="hero-h1">We can provide<br>the care you need<br>to feel <em>alive</em></h1>
-    <p class="hero-sub">Body, mind and soul. Guided by Xana Nunes through transformative retreats, breathwork, and holistic coaching &mdash; rooted in Portugal, reaching the world.</p>
+    <p class="hero-sub">Set body, mind, and soul &mdash; guided by Xana Nunes through holistic coaching, breathwork sessions, transformative retreats and daily events. Rooted in Portugal, reaching the world.</p>
     <div class="hero-ctas">
       <a href="#retreats" class="btn-primary">Book With Us</a>
       <a href="#about" class="btn-ghost">About Us</a>
     </div>
   </div>
   <div class="hero-right">
-    <div class="hero-candle-art"></div>
+    <div class="hero-candle-art"><img src="abertura.png" alt="Wize Collective ‚Äî Holistic Health" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
     <div class="hero-overlay-text">"In the waves of change<br>we find who we truly are."</div>
   </div>
 </section>
@@ -519,8 +535,8 @@ footer{background:var(--plum2);border-top:1px solid rgba(255,255,255,.08);paddin
 <!-- MARQUEE -->
 <div class="marquee-band">
   <div class="marquee-inner">
-    <span>Holistic Coaching</span><span class="dot"> &middot; </span><span>Amaz&oacute;nes</span><span class="dot"> &middot; </span><span>Flux &middot; Movement &amp; Breath</span><span class="dot"> &middot; </span><span>Breathwork</span><span class="dot"> &middot; </span><span>Travel Experiences</span><span class="dot"> &middot; </span>
-    <span>Holistic Coaching</span><span class="dot"> &middot; </span><span>Amaz&oacute;nes</span><span class="dot"> &middot; </span><span>Flux &middot; Movement &amp; Breath</span><span class="dot"> &middot; </span><span>Breathwork</span><span class="dot"> &middot; </span><span>Travel Experiences</span><span class="dot"> &middot; </span>
+    <span>Holistic Coaching</span><span class="dot"> &middot; </span><span>Seeds Manual &mdash; The Manual You Never Received</span><span class="dot"> &middot; </span><span>Amaz&oacute;nes</span><span class="dot"> &middot; </span><span>Flux &middot; Movement &amp; Breath</span><span class="dot"> &middot; </span><span>Breathwork</span><span class="dot"> &middot; </span><span>Travel Experiences</span><span class="dot"> &middot; </span>
+    <span>Holistic Coaching</span><span class="dot"> &middot; </span><span>Seeds Manual &mdash; The Manual You Never Received</span><span class="dot"> &middot; </span><span>Amaz&oacute;nes</span><span class="dot"> &middot; </span><span>Flux &middot; Movement &amp; Breath</span><span class="dot"> &middot; </span><span>Breathwork</span><span class="dot"> &middot; </span><span>Travel Experiences</span><span class="dot"> &middot; </span>
   </div>
 </div>
 
@@ -537,6 +553,7 @@ footer{background:var(--plum2);border-top:1px solid rgba(255,255,255,.08);paddin
     <h2 class="section-title reveal rd1">Holistic health<br>is a <em>journey</em>,<br>not a destination</h2>
     <p class="section-body reveal rd2">Wize Collective was born from a deep belief that true wellbeing encompasses every layer of human experience. Founded by Xana Nunes &mdash; a certified holistic coach and breathwork facilitator &mdash; we weave together the wisdom of traditional coaching, breathwork, movement, and ceremony into experiences that nourish body, mind, and soul.</p>
     <p class="section-body reveal rd3">Xana's approach blends the foundations of traditional coaching with breathwork, meditation, movement, and music therapy. She facilitates in Portuguese, French, and English &mdash; creating spaces where transformation happens naturally, gently, and permanently. Portuguese in roots. Universal in reach.</p>
+    <p class="section-body reveal rd4">Our symbol is the octopus &mdash; a creature of extraordinary intelligence, adaptability, and regeneration. With three hearts and the ability to regrow its own limbs, the octopus embodies the very essence of transformation: the courage to release what no longer serves, and the quiet power to rebuild from within. It moves fluidly between worlds, shape-shifting through life's currents with grace and intention. For Wize Collective, it is a reminder that healing is not linear &mdash; it is alive, intuitive, and deeply rooted in the wisdom of the body itself.</p>
     <div class="about-pillars">
       <div class="pillar reveal rd1"><div class="pillar-icon">&#127807;</div><div class="pillar-title">Body</div><div class="pillar-desc">Movement, breathwork, and somatic practices that awaken physical vitality.</div></div>
       <div class="pillar reveal rd2"><div class="pillar-icon">&#129504;</div><div class="pillar-title">Mind</div><div class="pillar-desc">Coaching tools and mindfulness that create lasting clarity and direction.</div></div>
@@ -552,20 +569,41 @@ footer{background:var(--plum2);border-top:1px solid rgba(255,255,255,.08);paddin
     <p class="retreats-sub reveal rd2">From monthly breathwork ceremonies to immersive multi-day retreats across the world &mdash; each program is a doorway into deeper self-knowing.</p>
   </div>
   <div class="retreats-grid">
-    <!-- 1. Amaz&oacute;nes Retreat -->
+    <!-- 1. Holistic Coaching -->
     <div class="retreat-card reveal rd1">
-      <div class="retreat-card-img rci-2"><div class="retreat-tag">Retreat</div><div class="retreat-date-badge"><div class="rdb-day">06</div><div class="rdb-month">Jun 2025</div></div></div>
-      <div class="retreat-body"><div class="retreat-name">Amaz&oacute;nes</div><div class="retreat-location">&#128205; Travel Experience</div><p class="retreat-desc">Biodynamic breathwork, trauma release, yoga, and tantric practices. Embrace your polarities &mdash; masculine and feminine, shadow and light.</p><div class="retreat-footer"><button class="book-btn" onclick="openModal('Amaz&oacute;nes Retreat','June 6&ndash;10, 2025 &middot; Travel Experience','&euro;1,400')">Book Now</button></div></div>
+      <div class="retreat-card-img rci-1"><div class="retreat-tag">1-on-1</div><div class="retreat-date-badge"><div class="rdb-day">&infin;</div><div class="rdb-month">Ongoing</div></div></div>
+      <div class="retreat-body"><div class="retreat-name">Holistic Coaching</div><div class="retreat-location">&#128205; Online &amp; In-person</div><p class="retreat-desc">Private sessions with Xana Nunes combining traditional coaching with breathwork, meditation, and music therapy. PT &middot; FR &middot; EN.</p><div class="retreat-footer"><a href="mailto:info.wizecollective@gmail.com?subject=I%20want%20to%20know%20more%20about%20Holistic%20Coaching&body=Thank%20you%20for%20your%20interest!%20Here%20is%20more%20information%20about%20Holistic%20Coaching..." class="book-btn" style="text-decoration:none;text-align:center;">I want to know more</a></div></div>
     </div>
-    <!-- 2. Flux -->
+    <!-- 2. Seeds -->
+    <div class="retreat-card reveal rd2">
+      <div class="retreat-card-img rci-4"><div class="retreat-tag">3-Month Journey</div><div class="retreat-date-badge"><div class="rdb-day">&#127793;</div><div class="rdb-month">Program</div></div></div>
+      <div class="retreat-body"><div class="retreat-name">Seeds</div><div class="retreat-location">&#128205; Holistic Coaching Program</div><p class="retreat-desc">A 3-month holistic coaching journey designed to change habits in your life &mdash; rooted in the philosophy of the eBook <em>Seeds Manual &mdash; The Manual You Never Received</em>. Plant the seeds, nurture the change, harvest a new way of being.</p><div class="retreat-footer"><a href="mailto:info.wizecollective@gmail.com?subject=I%20want%20to%20know%20more%20about%20Seeds&body=Thank%20you%20for%20your%20interest!%20Here%20is%20more%20information%20about%20Seeds..." class="book-btn" style="text-decoration:none;text-align:center;">I want to know more</a></div></div>
+    </div>
+    <!-- 3. Seeds Manual eBook -->
+    <div class="retreat-card reveal rd3">
+      <div class="retreat-card-img rci-ebook"><div class="retreat-tag">eBook</div><div class="retreat-date-badge"><div class="rdb-day">&#128214;</div><div class="rdb-month">New</div></div></div>
+      <div class="retreat-body"><div class="retreat-name">Seeds Manual</div><div class="retreat-location" style="font-style:italic;letter-spacing:.08em;text-transform:none;font-family:'Cormorant',serif;font-size:.85rem;">The Manual You Never Received</div><p class="retreat-desc">Our instruction manual for being human, from the universe to your cells. A guide to the ecosystems that hold you &mdash; cosmic, planetary, biological, and cellular &mdash; and to living in conscious relationship with them. Science and ancient wisdom, woven together, turned into simple daily practice.</p><div class="retreat-footer" style="flex-direction:column;gap:10px;align-items:stretch;">
+  <div style="display:flex;gap:8px;">
+    <a href="#" class="book-btn" style="text-decoration:none;text-align:center;flex:1;">Amazon &rarr;</a>
+    <a href="seeds-manual.html" class="book-btn" style="text-decoration:none;text-align:center;flex:1;background:transparent;border:1px solid var(--plum);color:var(--plum);">Read Online &rarr;</a>
+  </div>
+  <span style="font-family:'Cormorant',serif;font-size:1rem;color:var(--muted);font-style:italic;text-align:right;">Price TBA</span>
+</div></div>
+    </div>
+    <!-- 4. Biodynamic Breathwork Sessions -->
+    <div class="retreat-card reveal rd1">
+      <div class="retreat-card-img rci-3"><div class="retreat-tag">Breathwork</div><div class="retreat-date-badge"><div class="rdb-day">&#127804;</div><div class="rdb-month">Sessions</div></div></div>
+      <div class="retreat-body"><div class="retreat-name">Biodynamic Breathwork Sessions</div><div class="retreat-location">&#128205; In-person &amp; Online</div><p class="retreat-desc">A journey of breath and movement to find your inner self. Through biodynamic breathwork, release what is held in the body and reconnect with the rhythm of your own being.</p><div class="retreat-footer"><a href="mailto:info.wizecollective@gmail.com?subject=I%20want%20to%20know%20more%20about%20Biodynamic%20Breathwork%20Sessions&body=Thank%20you%20for%20your%20interest!%20Here%20is%20more%20information%20about%20Biodynamic%20Breathwork%20Sessions..." class="book-btn" style="text-decoration:none;text-align:center;">I want to know more</a></div></div>
+    </div>
+    <!-- 5. Flux -->
     <div class="retreat-card reveal rd2">
       <div class="retreat-card-img rci-3"><div class="retreat-tag">Monthly Event</div><div class="retreat-date-badge"><div class="rdb-day">24</div><div class="rdb-month">Apr 2025</div></div></div>
-      <div class="retreat-body"><div class="retreat-name">Flux</div><div class="retreat-location">&#128205; Circular Space, Lisbon</div><p class="retreat-desc">A 2-hour monthly ceremony of movement, breath, dance, and meditation &mdash; guided by the moon cycle. Release tension and reconnect with your inner self.</p><div class="retreat-footer"><button class="book-btn" onclick="openModal('Flux &mdash; April','April 24, 2025 &middot; Circular Space, Lisbon','&euro;45')">Book Now</button></div></div>
+      <div class="retreat-body"><div class="retreat-name">Flux</div><div class="retreat-location">&#128205; Circular Space, Lisbon</div><p class="retreat-desc">A 2-hour monthly ceremony of movement, breath, dance, and meditation &mdash; guided by the moon cycle. Release tension and reconnect with your inner self.</p><div class="retreat-footer"><a href="mailto:info.wizecollective@gmail.com?subject=I%20want%20to%20know%20more%20about%20Flux&body=Thank%20you%20for%20your%20interest!%20Here%20is%20more%20information%20about%20Flux..." class="book-btn" style="text-decoration:none;text-align:center;">I want to know more</a></div></div>
     </div>
-    <!-- 3. Holistic Coaching -->
-    <div class="retreat-card reveal rd3">
-      <div class="retreat-card-img rci-1"><div class="retreat-tag">1-on-1</div><div class="retreat-date-badge"><div class="rdb-day">&infin;</div><div class="rdb-month">Ongoing</div></div></div>
-      <div class="retreat-body"><div class="retreat-name">Holistic Coaching</div><div class="retreat-location">&#128205; Online &amp; In-person</div><p class="retreat-desc">Private sessions with Xana Nunes combining traditional coaching with breathwork, meditation, and music therapy. PT &middot; FR &middot; EN.</p><div class="retreat-footer"><button class="book-btn" onclick="openModal('Holistic Coaching Session','1-on-1 with Xana Nunes','&euro;120')">Book Now</button></div></div>
+    <!-- 6. Amaz√¥nes (last) -->
+    <div class="retreat-card reveal rd2">
+      <div class="retreat-card-img rci-2"><div class="retreat-tag">Retreat</div><div class="retreat-date-badge"><div class="rdb-day">06</div><div class="rdb-month">Jun 2025</div></div></div>
+      <div class="retreat-body"><div class="retreat-name">Amaz&oacute;nes</div><div class="retreat-location">&#128205; Travel Experience</div><p class="retreat-desc">Biodynamic breathwork, trauma release, yoga, and tantric practices. Embrace your polarities &mdash; masculine and feminine, shadow and light.</p><div class="retreat-footer"><a href="mailto:info.wizecollective@gmail.com?subject=I%20want%20to%20know%20more%20about%20Amaz%C3%B4nes&body=Thank%20you%20for%20your%20interest!%20Here%20is%20more%20information%20about%20Amaz%C3%B4nes..." class="book-btn" style="text-decoration:none;text-align:center;">I want to know more</a></div></div>
     </div>
   </div>
 </section>
@@ -675,7 +713,7 @@ footer{background:var(--plum2);border-top:1px solid rgba(255,255,255,.08);paddin
 <footer>
   <div class="footer-grid">
     <div><span class="footer-brand-logo">Wize Collective</span><p class="footer-bio">A holistic approach to health and consciousness by Xana Nunes. Body, mind and soul.</p></div>
-    <div><div class="footer-col-title">Programs</div><ul class="footer-links"><li><a href="#retreats">Amaz&oacute;nes</a></li><li><a href="#retreats">Flux</a></li><li><a href="#retreats">Holistic Coaching</a></li></ul></div>
+    <div><div class="footer-col-title">Programs</div><ul class="footer-links"><li><a href="#retreats">Holistic Coaching</a></li><li><a href="#retreats">Seeds</a></li><li><a href="#retreats">Breathwork Sessions</a></li><li><a href="#retreats">Flux</a></li><li><a href="#retreats">Amaz&oacute;nes</a></li><li><a href="seeds-manual.html">Seeds Manual eBook</a></li></ul></div>
     <div><div class="footer-col-title">Navigate</div><ul class="footer-links"><li><a href="#about">About Us</a></li><li><a href="#calendar">Calendar</a></li><li><a href="#testimonials">Words</a></li><li><a href="#blog">Blog</a></li></ul></div>
     <div><div class="footer-col-title">Contact</div><ul class="footer-links"><li><a href="mailto:hello@wizecollective.pt">hello@wizecollective.pt</a></li><li><a href="#faq">FAQ</a></li></ul></div>
   </div>
